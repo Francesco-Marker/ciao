@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiedere un Appuntamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Form di login con nome, cognome, data di nascita e password -->
+            <div id="login">
+                <h1>Accesso necessario</h1>
+                <form id="loginForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Inserisci il tuo nome" required>
+                    
+                    <label for="cognome">Cognome:</label>
+                    <input type="text" id="cognome" placeholder="Inserisci il tuo cognome" required>
+                    
+                    <label for="dataNascita">Data di Nascita (formato: gg/mm/aaaa):</label>
+                    <input type="text" id="dataNascita" placeholder="Esempio: 03/04/2008" required>
+                    
+                    <label for="password">Password (Indizio: nome e cognome tutto piccolo):</label>
+                    <input type="password" id="password" placeholder="Inserisci la tua password" required>
+                    
+                    <button type="submit">Accedi</button>
+                </form>
+                <p id="errore" style="color: red; display: none;">Credenziali errate! Riprova.</p>
+            </div>
+
+            <!-- La domanda e i pulsanti di risposta sono nascosti inizialmente -->
+            <div id="domanda" style="display: none;">
+                <h1>Ciao amore!</h1>
+                <p id="messaggioIniziale">Questa è una vera e propria scusa, originale però. Deriva dal sogno che ho fatto stanotte.</p>
+                <button id="rivelareDomanda">Clicca per scoprire la domanda!</button>
+                
+                <div id="domandaVisibile" style="display: none;">
+                    <p>Anche se sbagliato, anche sapendo che non porterà a nulla, ti va di uscire con me domani sera?</p>
+                    <div id="risposte" style="display: none;">
+                        <button id="si">Sì</button>
+                        <button id="no">No</button>
+                    </div>
+                </div>
+            </div>
+
+            <p id="risposta" style="display: none;"></p>
+
+            <!-- Selezione orario preferito -->
+            <div id="orario" style="display: none;">
+                <label for="orarioSelezionato">Seleziona orario che preferisci:</label>
+                <select id="orarioSelezionato">
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                </select>
+                <button id="confermaOrario">Conferma Orario</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
